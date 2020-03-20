@@ -131,6 +131,7 @@ export class MonacoEditor extends MonacoEditorServices implements TextEditor {
     protected create(options?: IEditorConstructionOptions, override?: monaco.editor.IEditorOverrideServices): Disposable {
         return this.editor = monaco.editor.create(this.node, {
             ...options,
+            lineNumbersMinChars: 3,
             lightbulb: { enabled: true },
             fixedOverflowWidgets: true,
             scrollbar: {
